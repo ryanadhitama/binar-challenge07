@@ -3,13 +3,9 @@ import { Col, Row } from "antd";
 import cx from "classnames";
 
 const Faq = () => {
-
   const [faq, setFaq] = useState(null);
   const handleFaq = (id) => {
-    if (id === faq) {
-      return setFaq(null);
-    }
-    return setFaq(id);
+    return id === faq ? setFaq(null) : setFaq(id);
   };
 
   return (

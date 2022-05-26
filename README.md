@@ -1,6 +1,15 @@
 # Binar Challenge 7
 
 URL : https://ryan-binar-challenge-7.web.app/
+
+## IMPORTANT
+
+Pastikan pencarian dilakukan sebelum tanggal 23 Maret 2022
+
+## Data
+
+https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json
+
 ## 🚀 How to run 
 
 Berikut cara menjalankan project ini
