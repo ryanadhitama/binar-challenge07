@@ -1,10 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
 import "antd/dist/antd.min.css";
 import "./assets/font/bootstrap-icons.css";
 import "./assets/css/style.css";
 
 import App from "./App";
+import store from "@app/store";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);

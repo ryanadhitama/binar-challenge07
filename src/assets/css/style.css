@@ -231,10 +231,10 @@ body {
 }
 
 .car-card img {
-  padding: 31px 16px;
   margin-bottom: 16px;
   width: 100%;
-  max-height: 245px;
+  height: 245px;
+  object-fit: cover;
 }
 
 .car-card h4 {

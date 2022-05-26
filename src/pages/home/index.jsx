@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import cx from 'classnames';
+import cx from "classnames";
 import { Col, Row, Typography } from "antd";
 import { Link } from "react-router-dom";
 
@@ -18,11 +18,11 @@ function Home() {
   const [faq, setFaq] = useState(null);
 
   const handleFaq = (id) => {
-    if(id === faq) {
+    if (id === faq) {
       return setFaq(null);
     }
     return setFaq(id);
-  }
+  };
 
   return (
     <Fragment>
@@ -38,9 +38,7 @@ function Home() {
                   kebutuhanmu untuk sewa mobil selama 24 jam.
                 </p>
                 <Link to="/cars">
-                  <button className="btn btn-success">
-                  Mulai Sewa Mobil
-                  </button>
+                  <button className="btn btn-success">Mulai Sewa Mobil</button>
                 </Link>
               </div>
             </Col>
@@ -162,9 +160,9 @@ function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="/" className="btn btn-success">
-              <strong>Mulai Sewa Mobil</strong>
-            </a>
+            <Link to="/cars">
+              <button className="btn btn-success">Mulai Sewa Mobil</button>
+            </Link>
           </div>
         </Container>
       </section>
@@ -183,7 +181,10 @@ function Home() {
                 <div className="card mb-3">
                   <div className="card-body faq-title">
                     <div
-                      className={cx("toggle-collapse", faq !== 1 && 'collapsed')}
+                      className={cx(
+                        "toggle-collapse",
+                        faq !== 1 && "collapsed"
+                      )}
                       data-toggle="collapse"
                       data-target="#collapseOne"
                       aria-expanded="false"
@@ -196,7 +197,7 @@ function Home() {
 
                   <div
                     id="collapseOne"
-                    className={cx("collapse", faq === 1 && 'show')}
+                    className={cx("collapse", faq === 1 && "show")}
                     aria-labelledby="headingOne"
                     data-parent="#accordion"
                   >
@@ -218,7 +219,10 @@ function Home() {
                 <div className="card mb-3">
                   <div className="card-body faq-title">
                     <div
-                      className={cx("toggle-collapse", faq !== 2 && 'collapsed')}
+                      className={cx(
+                        "toggle-collapse",
+                        faq !== 2 && "collapsed"
+                      )}
                       data-toggle="collapse"
                       data-target="#collapseTwo"
                       aria-expanded="false"
@@ -230,7 +234,7 @@ function Home() {
                   </div>
                   <div
                     id="collapseTwo"
-                    className={cx("collapse", faq === 2 && 'show')}
+                    className={cx("collapse", faq === 2 && "show")}
                     aria-labelledby="headingTwo"
                     data-parent="#accordion"
                   >
@@ -252,7 +256,10 @@ function Home() {
                 <div className="card mb-3">
                   <div className="card-body faq-title">
                     <div
-                      className={cx("toggle-collapse", faq !== 3 && 'collapsed')}
+                      className={cx(
+                        "toggle-collapse",
+                        faq !== 3 && "collapsed"
+                      )}
                       data-toggle="collapse"
                       data-target="#collapseThree"
                       aria-expanded="false"
@@ -264,7 +271,7 @@ function Home() {
                   </div>
                   <div
                     id="collapseThree"
-                    className={cx("collapse", faq === 3 && 'show')}
+                    className={cx("collapse", faq === 3 && "show")}
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
                   >
@@ -286,7 +293,10 @@ function Home() {
                 <div className="card mb-3">
                   <div className="card-body faq-title">
                     <div
-                      className={cx("toggle-collapse", faq !== 4 && 'collapsed')}
+                      className={cx(
+                        "toggle-collapse",
+                        faq !== 4 && "collapsed"
+                      )}
                       data-toggle="collapse"
                       data-target="#collapseFour"
                       aria-expanded="false"
@@ -298,7 +308,7 @@ function Home() {
                   </div>
                   <div
                     id="collapseFour"
-                    className={cx("collapse", faq === 4 && 'show')}
+                    className={cx("collapse", faq === 4 && "show")}
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
                   >
@@ -320,7 +330,10 @@ function Home() {
                 <div className="card mb-3">
                   <div className="card-body faq-title">
                     <div
-                      className={cx("toggle-collapse", faq !== 5 && 'collapsed')}
+                      className={cx(
+                        "toggle-collapse",
+                        faq !== 5 && "collapsed"
+                      )}
                       data-toggle="collapse"
                       data-target="#collapseFour"
                       aria-expanded="false"
@@ -332,7 +345,7 @@ function Home() {
                   </div>
                   <div
                     id="collapseFive"
-                    className={cx("collapse", faq === 5 && 'show')}
+                    className={cx("collapse", faq === 5 && "show")}
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
                   >

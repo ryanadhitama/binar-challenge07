@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import moment from "moment";
 
 import {
   Col,
@@ -24,16 +23,17 @@ function Search(props) {
 
   const [form] = Form.useForm();
   const history = useHistory();
-  const [state, setState] = useState("");
 
   function submitHandle() {
-    setState({
-      type: form.getFieldValue("type"),
-      date: moment(form.getFieldValue("date")),
-      time: moment(form.getFieldValue("time")),
-      passanger: form.getFieldValue("passanger"),
-    });
-    history.push("/result");
+    const time =
+      form.getFieldValue("date").format("Y-MM-DD") +
+      " " +
+      form.getFieldValue("time").format("HH:mm:ss");
+    history.push(
+      `/cars?withDriver=${form.getFieldValue(
+        "withDriver"
+      )}&availableAt=${time}&capacity=${form.getFieldValue("capacity")}`
+    );
   }
 
   return (
@@ -50,13 +50,13 @@ function Search(props) {
           <Col style={{ width: "100%" }}>
             <Form.Item
               label="Tipe Driver"
-              name="type"
+              name="withDriver"
               required={false}
               rules={[{ required: true, message: "Pilih Tipe Driver!" }]}
             >
               <Select disabled={props.detail} placeholder="Pilih Tipe Driver">
-                <Option value="1">Dengan Supir</Option>
-                <Option value="2">Tanpa Supir</Option>
+                <Option value="true">Dengan Supir</Option>
+                <Option value="false">Tanpa Supir</Option>
               </Select>
             </Form.Item>
           </Col>
@@ -92,7 +92,7 @@ function Search(props) {
             </Form.Item>
           </Col>
           <Col style={{ width: "100%" }}>
-            <Form.Item label="Jumlah Penumpang (optional)" name="passanger">
+            <Form.Item label="Jumlah Penumpang (optional)" name="capacity">
               <InputNumber
                 disabled={props.detail}
                 className="input-penumpang"
