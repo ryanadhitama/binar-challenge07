@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build"
+    "build": "craco build",
+    "deploy": "craco build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [
