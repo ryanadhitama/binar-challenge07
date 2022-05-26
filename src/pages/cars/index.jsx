@@ -13,8 +13,6 @@ function Cars() {
   const [result, setResult] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  console.log(listCarsJson)
-
   const query = useQuery();
 
   useEffect(() => {
