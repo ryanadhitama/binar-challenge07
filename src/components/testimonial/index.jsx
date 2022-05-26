@@ -31,8 +31,6 @@ const Testimonial = () => {
         centerInsufficientSlides={false}
         spaceBetween={30}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         navigation={{
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current,

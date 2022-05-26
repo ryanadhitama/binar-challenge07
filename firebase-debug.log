@@ -1,0 +1,34 @@
+[debug] [2022-05-26T12:39:06.878Z] ----------------------------------------------------------------------
+[debug] [2022-05-26T12:39:06.886Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2022-05-26T12:39:06.886Z] CLI Version:   11.0.1
+[debug] [2022-05-26T12:39:06.887Z] Platform:      darwin
+[debug] [2022-05-26T12:39:06.887Z] Node Version:  v16.14.0
+[debug] [2022-05-26T12:39:06.889Z] Time:          Thu May 26 2022 20:39:06 GMT+0800 (Central Indonesia Time)
+[debug] [2022-05-26T12:39:06.889Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-26T12:39:07.039Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-26T12:39:07.040Z] > authorizing via signed-in user (ryanadhitama2@gmail.com)
+[debug] [2022-05-26T12:39:07.040Z] [iam] checking project ryan-binar-challenge-7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-26T12:39:07.042Z] > refreshing access token with scopes: []
+[debug] [2022-05-26T12:39:07.044Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-26T12:39:07.286Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 26 May 2022 12:39:07 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-26T12:39:07.289Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryan-binar-challenge-7:testIamPermissions [none]
+[debug] [2022-05-26T12:39:07.289Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryan-binar-challenge-7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-26T12:39:08.481Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryan-binar-challenge-7:testIamPermissions 401
+[debug] [2022-05-26T12:39:08.481Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryan-binar-challenge-7:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2022-05-26T12:39:08.482Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-05-26T12:39:08.483Z] > refreshing access token with scopes: []
+[debug] [2022-05-26T12:39:08.483Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-26T12:39:08.762Z] <<< HTTP RESPONSE 400 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 26 May 2022 12:39:08 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-26T12:39:08.766Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ryan-binar-challenge-7 [none]
+[debug] [2022-05-26T12:39:08.983Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ryan-binar-challenge-7 401
+[debug] [2022-05-26T12:39:08.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ryan-binar-challenge-7 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2022-05-26T12:39:08.984Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-05-26T12:39:09.102Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:47:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project ryan-binar-challenge-7. Please make sure the project exists and your account has permission to access it.

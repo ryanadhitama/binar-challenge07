@@ -13,6 +13,8 @@ function Cars() {
   const [result, setResult] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  console.log(listCarsJson)
+
   const query = useQuery();
 
   useEffect(() => {
@@ -33,7 +35,7 @@ function Cars() {
           return (
             item.capacity >= capacity &&
             item.withDriver === withDriver &&
-            new Date(item.availableAt).getTime() >= availableAt
+            new Date(item.available).getTime() >= availableAt
           );
         });
         setResult(newList);

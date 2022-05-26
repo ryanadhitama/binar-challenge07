@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const uiStore = createSlice({
     name: "uiStore",
     initialState: {
-        title: "Binar Academy"
+        title: "Binar Car Rental"
     },
     reducers: {
         setTitle: (state, action) => {
