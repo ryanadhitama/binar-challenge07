@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row gutter={30}>
-          <Col span={6}>
+        <Row gutter={[30, 30]}>
+          <Col span={24} lg={6}>
             <div className="address">
               <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
               <a href="mailto:binarcarrental@gmail.com">
@@ -26,9 +26,9 @@ const Footer = () => {
               <a href="tel:081233334808">081-233-334-808</a>
             </div>
           </Col>
-          <Col span={12}>
-            <Row gutter={30}>
-              <Col span={8}>
+          <Col span={24} lg={12}>
+            <Row gutter={[30, 30]}>
+              <Col span={24} lg={8}>
                 <div className="footer-link">
                   <Link to={"/"}>Our Services</Link>
                   <Link to={"/"}>Why Us</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
                   <Link to={"/"}>FAQ</Link>
                 </div>
               </Col>
-              <Col span={16}>
+              <Col span={24} lg={16}>
                 <div className="social">
                   <p>Connect with us</p>
                   <ul>

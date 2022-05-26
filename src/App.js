@@ -4,6 +4,7 @@ import { Layout } from "antd";
 
 import { Navbar, Footer } from "@components";
 import Home from "@pages/home";
+import Cars from "@pages/cars";
 
 const { Header, Content } = Layout;
 
@@ -18,6 +19,7 @@ function App() {
           <Content>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/cars" component={Cars} />
             </Switch>
           </Content>
           <Footer />
