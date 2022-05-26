@@ -196,7 +196,7 @@ body {
   margin-bottom: -64px;
   margin-left: auto;
   margin-right: auto;
-  z-index: 1;
+  z-index: 999;
   position: relative;
 }
 
@@ -299,95 +299,70 @@ body {
   background: #4c964e;
 }
 
-.car-detail-card,
-.car-detail-content {
-  padding: 24px;
-  background: #ffffff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+.text-center {
+  text-align: center !important;
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.testimonial-item {
+  padding: 69px 32px 69px 46px;
+  background: #f1f3ff;
   border-radius: 8px;
-}
-
-.car-detail-content h4 {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-bottom: 16px;
-}
-
-.car-detail-content h5 {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-bottom: 8px;
-}
-
-.car-detail-content ul {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 175%;
-  color: #8a8a8a;
-  margin-bottom: 16px;
-  padding-left: 24px;
-}
-
-.car-detail-card img {
-  width: auto;
-  padding: 4px 0 28px;
-  max-height: 216px;
-  margin: 0 auto 24px auto;
-  display: block;
-}
-
-.car-detail-card h4 {
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-bottom: 8px;
-}
-
-.car-detail-card .car-details {
-  margin-bottom: 50px;
-}
-
-.car-detail-card .car-details > span {
-  display: inline-block;
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 20px;
-  color: #8a8a8a;
-  margin-right: 16px;
-}
-
-.car-detail-card .car-details > span:last-child {
-  margin-bottom: 0;
-}
-
-.car-detail-card .car-details .anticon {
-  font-size: 12px;
-  margin-right: 4px;
-  color: #8a8a8a;
-}
-
-.car-detail-card .price {
   display: flex;
   justify-content: space-between;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-bottom: 24px;
+  align-items: center;
 }
 
-.car-detail-card .price span {
-  display: inline-block;
+.testimonial-item .star {
+  margin-bottom: 16px;
 }
 
-.car-detail-card .price span:last-child {
-  font-weight: 700;
+.testimonial-item .profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.testimonial-item .testimonial-content {
+  padding-left: 46px;
+}
+
+
+.swiper-button {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  transition: ease 0.5s;
+}
+
+.swiper-button:hover {
+  background-color: #5cb85f;
+}
+
+.swiper-button svg {
+  height: 13px;
+}
+
+.swiper-button:hover svg > path {
+  stroke: #ffffff;
+}
+
+.swiper-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 88px;
+  width: 100%;
+  margin: 24px auto 0;
 }
 
 footer {
@@ -646,6 +621,20 @@ h6,
   font-family: "bootstrap-icons";
   content: "\f286";
   float: right;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 1200px) {

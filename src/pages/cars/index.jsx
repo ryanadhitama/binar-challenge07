@@ -1,14 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Col, Empty, Row, Typography, Skeleton } from "antd";
-
-import HeroImage from "@assets/img/hero.png";
+import { Col, Empty, Row, Skeleton } from "antd";
 
 import useQuery from "@libs/utils/query";
-import { Card, Container, Search } from "@components";
+import { Banner, Card, Container, Search } from "@components";
 import { getAsyncData } from "@reducers/api-store";
-
-const { Title } = Typography;
 
 function Cars() {
   const dispatch = useDispatch();
@@ -52,30 +48,7 @@ function Cars() {
 
   return (
     <Fragment>
-      <section className="banner-section">
-        <Container>
-          <Row gutter={30}>
-            <Col span={12}>
-              <div className="banner-content">
-                <Title>Sewa & Rental Mobil Terbaik di kawasan Denpasar</Title>
-                <p>
-                  Selamat datang di Binar Car Rental. Kami menyediakan mobil
-                  kualitas terbaik dengan harga terjangkau. Selalu siap melayani
-                  kebutuhanmu untuk sewa mobil selama 24 jam.
-                </p>
-              </div>
-            </Col>
-            <Col span={12}>
-              <div className="hero">
-                <img
-                  src={HeroImage}
-                  alt="Sewa & Rental Mobil Terbaik di kawasan Denpasar"
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Banner hideButton />
       <section className="search-wrapper">
         <Container>
           <Search width={"1047px"} />
@@ -90,7 +63,7 @@ function Cars() {
                   {Array(9)
                     .fill(1)
                     .map((el, i) => (
-                      <Col span={8} key={i}>
+                      <Col span={24} sm={12} lg={8} key={i}>
                         <Skeleton
                           active
                           style={{ marginBottom: "50px" }}
@@ -104,7 +77,7 @@ function Cars() {
                 !loading &&
                 result.length > 0 &&
                 result.map((car, index) => (
-                  <Col span={8} key={index}>
+                  <Col span={24} sm={12} lg={8} key={index}>
                     <Card car={car} />
                   </Col>
                 ))}
