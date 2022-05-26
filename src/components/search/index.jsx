@@ -8,14 +8,12 @@ import {
   Form,
   DatePicker,
   TimePicker,
-  InputNumber,
-  Typography,
+  InputNumber
 } from "antd";
 
 import { PropertySafetyFilled, UserOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
-const { Title } = Typography;
 
 function Search(props) {
   const dateFormat = "DD MMM YYYY";
@@ -52,7 +50,6 @@ function Search(props) {
         className="search-bar"
         style={{ maxWidth: PropertySafetyFilled.width }}
       >
-        {props.title === true && <Title level={4}>Pencarianmu</Title>}
         <Form form={form} layout="vertical" onFinish={submitHandle}>
           <Row gutter={16} style={{ alignItems: "flex-end" }}>
             <Col span={24} sm={12} lg={5}>

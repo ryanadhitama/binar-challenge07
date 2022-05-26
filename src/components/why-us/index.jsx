@@ -9,14 +9,12 @@ const WhyUs = () => {
     <section id="why-us" className="general-section">
       <div className="container">
         <h2
-          className="mb-3 why-us__title aos-init aos-animate"
-          data-aos="fade-right"
+          className="mb-3 why-us__title"
         >
           Why Us?
         </h2>
         <p
-          className="mb-40 why-us__content aos-init aos-animate"
-          data-aos="fade-right"
+          className="mb-40 why-us__content"
         >
           Mengapa harus pilih Binar Car Rental?
         </p>

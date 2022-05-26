@@ -1,9 +1,11 @@
 import { useRef, useEffect } from "react";
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import AvatarImage from "@assets/img/avatar.png";
 import StarIcon from "@assets/img/star.svg";
+import { ReactComponent as NextIcon } from "@assets/img/next.svg";
+import { ReactComponent as PrevIcon } from "@assets/img/prev.svg";
 
 const Testimonial = () => {
   SwiperCore.use([Navigation]);
@@ -18,10 +20,10 @@ const Testimonial = () => {
   return (
     <section id="testimonial" className="general-section">
       <div className="container text-center">
-        <h2 className="mb-3" data-aos="fade-up">
+        <h2 className="mb-3">
           Testimonial
         </h2>
-        <p className="mb-40" data-aos="fade-up">
+        <p className="mb-40">
           Berbagai review positif dari para pelanggan kami
         </p>
       </div>
@@ -74,38 +76,10 @@ const Testimonial = () => {
 
         <div className="swiper-button-wrapper">
           <div className="swiper-prev swiper-button" ref={navigationPrevRef}>
-            <svg
-              width="8"
-              height="12"
-              viewBox="0 0 8 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.5 11L1.5 6L6.5 1"
-                stroke="#222222"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+           <PrevIcon />
           </div>
           <div className="swiper-next swiper-button" ref={navigationNextRef}>
-            <svg
-              width="8"
-              height="12"
-              viewBox="0 0 8 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.5 11L6.5 6L1.5 1"
-                stroke="#222222"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <NextIcon />
           </div>
         </div>
       </Swiper>
