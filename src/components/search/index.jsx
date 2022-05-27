@@ -8,7 +8,7 @@ import {
   Form,
   DatePicker,
   TimePicker,
-  InputNumber
+  InputNumber,
 } from "antd";
 
 import { PropertySafetyFilled, UserOutlined } from "@ant-design/icons";

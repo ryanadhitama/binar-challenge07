@@ -2,6 +2,7 @@
 import { useState } from "react";
 import cx from "classnames";
 import { Link, withRouter } from "react-router-dom";
+
 import Logo from "@assets/img/logo.png";
 import CloseIcon from "@assets/img/close.png";
 import MenuIcon from "@assets/img/menu.png";
@@ -9,6 +10,9 @@ import { Container } from "@components";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
 
   return (
     <div className="navigation">

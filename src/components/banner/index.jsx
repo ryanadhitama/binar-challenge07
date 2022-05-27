@@ -1,5 +1,6 @@
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
+// import { GoogleLogin } from "@react-oauth/google";
 
 import { Container } from "@components";
 import HeroImage from "@assets/img/hero.png";
@@ -34,6 +35,17 @@ const Banner = ({ hideButton = false }) => {
                     </button>
                   </Link>
                 )}
+                {/* <div style={{marginTop: '20px'}}>
+                  <GoogleLogin
+                    onSuccess={(credentialResponse) => {
+                      console.log(credentialResponse);
+                    }}
+                    onError={() => {
+                      console.log("Login Failed");
+                    }}
+                  />
+                  <button onClick={() => alert('a')}>Logout</button>
+                </div> */}
               </Col>
             </Row>
           </Container>

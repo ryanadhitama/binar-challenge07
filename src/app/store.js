@@ -1,18 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import uiStore from "@reducers/ui-store"
-import apiStore from "@reducers/api-store"
+import uiStore from "@reducers/ui-store";
+import apiStore from "@reducers/api-store";
+import authStore from "@reducers/auth-store";
 
 const store = configureStore({
-    reducer: {
-        ui: uiStore,
-        api: apiStore,
-    }
-})
+  reducer: {
+    ui: uiStore,
+    api: apiStore,
+    auth: authStore,
+  },
+});
 
-store.subscribe(() => {
-    console.log('title changed')
-    const state = store.getState()
-    document.title = state.ui.title
-})
-
-export default store
+export default store;

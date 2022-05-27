@@ -21,6 +21,7 @@ export const apiStore = createSlice({
   name: "apiStore",
   initialState: {
     cars: [],
+    filteredCars: []
   },
   extraReducers: (builder) => {
     builder.addCase(getAsyncData.fulfilled, (state, action) => {
@@ -31,7 +32,9 @@ export const apiStore = createSlice({
         const isPositive = getRandomInt(0, 1) === 1;
         const timeAt = new Date();
         const mutator = getRandomInt(1000000, 100000000);
-        let availableAt = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator)).toISOString();
+        let availableAt = new Date(
+          timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
+        ).toISOString();
 
         item.image = item.image.replaceAll(
           "./",
