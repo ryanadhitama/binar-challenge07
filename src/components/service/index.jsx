@@ -6,7 +6,7 @@ const Service = () => {
       <div className="container">
         <div className="row-service">
           <div>
-            <img src={ServiceImage} alt="Service" srcset="" />
+            <img src={ServiceImage} alt="Service" />
           </div>
           <div>
             <h2 className="mb-4">

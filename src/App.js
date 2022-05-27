@@ -6,16 +6,14 @@ import { Navbar, Footer } from "@components";
 import Home from "@pages/home";
 import Cars from "@pages/cars";
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Layout>
-          <Header>
-            <Navbar />
-          </Header>
+          <Navbar />
           <Content>
             <Switch>
               <Route exact path="/" component={Home} />

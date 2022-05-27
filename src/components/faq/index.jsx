@@ -19,7 +19,7 @@ const Faq = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
           </Col>
-          <Col lg={14}>
+          <Col span={24} lg={14}>
             <div id="accordion">
               <div className="card mb-3">
                 <div className="card-body faq-title">

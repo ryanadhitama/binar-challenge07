@@ -51,7 +51,7 @@ const Testimonial = () => {
         {Array(9)
           .fill(1)
           .map((el, i) => (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <div className="testimonial-item">
                 <img className="profile" src={AvatarImage} alt="" />
                 <div className="testimonial-content">
