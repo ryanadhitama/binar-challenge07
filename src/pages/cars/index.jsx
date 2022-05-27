@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Col, Empty, Row, Skeleton } from "antd";
+import { Col, Empty, Row } from "antd";
 
 import useQuery from "@libs/utils/query";
-import { Banner, Card, Container, Search } from "@components";
+import { Banner, Card, CardLoading, Container, Search } from "@components";
 import { getAsyncData } from "@reducers/api-store";
 
 function Cars() {
@@ -57,22 +57,8 @@ function Cars() {
       <div className="row">
         <section className="car-result-wrapper">
           <Container>
+            {loading && <CardLoading />}
             <Row gutter={24}>
-              {loading && (
-                <>
-                  {Array(9)
-                    .fill(1)
-                    .map((el, i) => (
-                      <Col span={24} sm={12} lg={8} key={i}>
-                        <Skeleton
-                          active
-                          style={{ marginBottom: "50px" }}
-                        ></Skeleton>
-                      </Col>
-                    ))}
-                </>
-              )}
-
               {showResult &&
                 !loading &&
                 result.length > 0 &&
